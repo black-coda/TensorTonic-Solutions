@@ -11,6 +11,7 @@ def knn_distance(X_train, X_test, k):
         X_test = X_test.reshape(-1, 1)
 
     # Compute distances
+    # ∣∣q−x∣∣2=∣∣q∣∣2+∣∣x∣∣2−2q⋅x
     train_sq = np.sum(X_train**2, axis=1)
     test_sq = np.sum(X_test**2, axis=1)
 
